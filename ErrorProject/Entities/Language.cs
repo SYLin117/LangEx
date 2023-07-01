@@ -1,4 +1,4 @@
-namespace API.Entities;
+namespace ErrorProject.Entities;
 
 public class Language
 {

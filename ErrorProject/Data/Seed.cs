@@ -1,13 +1,12 @@
 using System.Globalization;
 using System.Text.Json;
-using API.Entities;
 using CsvHelper;
 using CsvHelper.Configuration;
-using CsvHelper.Configuration.Attributes;
+using ErrorProject.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Data
+namespace ErrorProject.Data
 {
     public class Seed
     {
@@ -71,7 +70,7 @@ namespace API.Data
                 user.Languages = langRows1;
                 user.InterestedLanguages = langRows2;
                 user.CountryId = country.Id;
-                
+
                 await userManager.CreateAsync(user, "P@ssw0rd");
                 await userManager.AddToRoleAsync(user, "Member");
             }

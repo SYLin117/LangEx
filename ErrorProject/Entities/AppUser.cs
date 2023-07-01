@@ -1,7 +1,6 @@
-using API.Extensions;
 using Microsoft.AspNetCore.Identity;
 
-namespace API.Entities
+namespace ErrorProject.Entities
 {
     public class AppUser : IdentityUser<int>
     {

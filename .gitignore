@@ -491,3 +491,4 @@ API/appsettings.json
 **/bin/
 **/obj/
 **/Middleware/
+**/Migrations/

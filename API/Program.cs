@@ -74,8 +74,9 @@ try
     var roleManager = services.GetRequiredService<RoleManager<AppRole>>();
     await context.Database.MigrateAsync();
     await Seed.ClearConnections(context);
-    await Seed.SeedUsers(userManager, roleManager);
-    await Seed.SeedStatic();
+    await Seed.SeedStatic(context);
+    await Seed.SeedUsers(userManager, roleManager, context);
+    
 }
 catch (Exception ex)
 {
